@@ -1,0 +1,2 @@
+Origenal resource
+https://www.kaggle.com/datasets/smayanj/e-commerce-transactions-dataset/data

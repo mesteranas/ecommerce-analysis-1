@@ -1,70 +1,88 @@
-# E-Commerce Transactions Analyzer
+# ecommerce-analysis-1
 
+A Python project that analyzes an e-commerce transactions dataset using **Pandas**. It generates business insights by analyzing countries, product categories, and monthly sales trends, then exports the results as Excel spreadsheets and a Markdown report.
 
+This project was created as a learning exercise in data analysis and demonstrates practical use of Pandas for working with real-world transactional data.
 
-## 📖 Project Explanation
+## Features
 
+- Country-level sales and transaction analysis
+- Product category analysis
+- Monthly revenue and transaction trend analysis
+- Month-over-month revenue growth calculation
+- Automatic Excel report generation
+- Automatic Markdown report generation
+- Clean and readable Python code
 
+## Requirements
 
-This project is a data analysis utility that processes e-commerce transaction workflows using the Python `pandas` library. The core script (`main.py`) reads a transactional dataset to automatically evaluate database records and extract high-level business intelligence metrics.
+- Python 3.10+
+- pandas
 
+Install the required packages:
 
+```bash
+pip install -r requirements.txt
+```
 
-The system programmatically evaluates the data to generate insights across the following core areas:
+## Usage
 
+Run the analysis scripts:
 
+```bash
+python Country_analysis.py
+python categoryAnalysis.py
+python Time_analysis.py
+python report.py
+```
 
-* **Geographic Volume:** It determines which country handles the highest overall volume of user transactions.
+The generated reports will be saved automatically in the `output` directory.
 
+## Files
 
+| File | Description |
+|------|-------------|
+| `Country_analysis.py` | Analyzes the dataset by country. Calculates total revenue, transaction count, most popular payment method, most popular product category, top customer, and country revenue rankings. Exports the results to `output/country.xlsx`. |
+| `categoryAnalysis.py` | Performs product category analysis, including revenue, transaction count, top customer, highest-revenue country, and category rankings. Exports the results to `output/category.xlsx`. |
+| `Time_analysis.py` | Performs monthly time-series analysis, including monthly revenue, transaction count, and month-over-month revenue growth. Exports the results to `output/Time_analysis.xlsx`. |
+| `report.py` | Generates a Markdown report summarizing the key insights discovered during the analysis. The report is saved as `output/report.md`. |
+| `ecommerce_transactions.csv` | The dataset used for all analyses. |
+| `requirements.txt` | Lists the required Python packages. |
+| `resources.txt` | Contains the link to the original dataset. |
+| `output/` | Contains all generated reports after running the analysis scripts. |
 
+## Output
 
+Running the project generates:
 
-* **Financial Performance:** It aggregates total purchases to pinpoint the country where the most money is spent.
+- `country.xlsx`
+- `category.xlsx`
+- `Time_analysis.xlsx`
+- `report.md`
 
+inside the `output` directory.
 
+## Dataset
 
+This project uses the **E-Commerce Transactions Dataset** created by **smayanj**.
 
+Original source:
+https://www.kaggle.com/datasets/smayanj/e-commerce-transactions-dataset/data
 
-* **Payment Preferences:** It isolates the single most frequently utilized payment method across the entire customer base.
+All credit for the dataset belongs to its original author.
 
+## License
 
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
+The dataset is distributed separately by its original author. Please refer to the original Kaggle page for its licensing information and future updates.
 
+## Author
 
-* **Product Category Analytics:** It tracks transaction frequencies to identify the most common product category, alongside calculating cumulative sales values to reveal the highest revenue-generating product category.
+**Anas Youssef**
 
-
-
-
-
-* **Customer Behavior:** It identifies the platform's highest-spending user by total purchase value and isolates the most active shopper based on order frequency.
-
-
-
-
-
-
-
-All computed metrics are compiled directly into an automated Markdown text file (`report.md`) for quick executive reviews.
-
-
+GitHub: https://github.com/mesteranas
 
 ---
 
-
-
-## ⚖️ Legal Notice & Attribution
-
-
-
-* **Dataset Source:** The foundational data utilized by this application is derived from the public **E-Commerce Transactions Dataset** curated by *smayanj* on Kaggle.
-
-* **Repository Status:** For ease of immediate local deployment and execution, a copy of the transactional dataset (`ecommerce_transactions.csv`) is bundled directly within this project repository.
-
-
-
-
-
-* **Licensing:** Both the original Kaggle source dataset and this analytical codebase are officially licensed under the terms of the **MIT License**. You are permitted to use, modify, merge, publish, and distribute this work freely, provided that the original license and copyright notices are preserved.
-
+If you found this project useful, consider giving the repository a ⭐ and crediting the original dataset creator.
